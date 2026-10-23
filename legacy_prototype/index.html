@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NEXUS AI: Enterprise Two-Tower Resume Intelligence & Deterministic ATS Audit Engine. Optimize resumes with Google XYZ impact metrics and semantic skill gap analytics.">
+  <meta name="theme-color" content="#050608">
+  <title>NEXUS AI | Next-Gen Two-Tower Resume Intelligence & ATS Command Center</title>
+  
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310b981'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+</head>
+<body>
+
+  <!-- Ambient Light Orbs & Grid Overlay -->
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="aurora-orb aurora-1"></div>
+    <div class="aurora-orb aurora-2"></div>
+    <div class="aurora-orb aurora-3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- Interactive Cursor Radial Glow -->
+  <div id="cursorGlow" class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- App Wrapper -->
+  <div class="app-container">
+
+    <!-- Top Navigation -->
+    <header>
+      <nav class="navbar" id="topNav">
+        <a href="#" class="brand-wrapper" id="brandLink">
+          <div class="brand-logo-gem">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <span class="brand-name">NEXUS AI</span>
+          <span class="brand-badge">Two-Tower v4.2</span>
+        </a>
+
+        <div class="nav-actions">
+          <button class="sound-toggle-btn" id="soundToggleBtn" title="Toggle Haptic Sound Feedback" aria-label="Toggle Sound Feedback">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/>
+            </svg>
+          </button>
+
+          <button class="nav-btn primary" id="exportReportBtn">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+            Export ATS Audit
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+      <section class="hero-section" id="heroSection">
+        <div class="hero-pill">
+          <span class="pulsing-dot"></span>
+          <span>LATENT VECTOR SPACE • DETERMINISTIC ATS PARSER • GOOGLE XYZ</span>
+        </div>
+
+        <h1 class="hero-title">
+          Architect Your Career With <span class="gradient-text-emerald">Two-Tower AI</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Benchmark your resume against frontier engineering standards. Features deterministic layout parsing, Google XYZ quantified impact auditing, and semantic cosine similarity job matching.
+        </p>
+
+        <!-- Quick Persona Selectors (1-Click Demo) -->
+        <div class="persona-selector-section" id="personaSelectorSection">
+          <div class="persona-label">
+            <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+            <span>Test In 1-Click With Industry Personas</span>
+          </div>
+
+          <div class="persona-chips-grid">
+            <button class="persona-chip active" data-persona="staff_ai" id="personaStaffAi">
+              <div class="persona-role">
+                <span>Dr. Elena Rostova</span>
+                <span class="persona-level">Staff AI • 94%</span>
+              </div>
+              <span class="persona-sub">Distributed ML, CUDA, Ray, vLLM</span>
+            </button>
+
+            <button class="persona-chip" data-persona="cloud_architect" id="personaCloudArch">
+              <div class="persona-role">
+                <span>Marcus Vance</span>
+                <span class="persona-level">Principal • 88%</span>
+              </div>
+              <span class="persona-sub">AWS, Terraform, Zero Trust, K8s</span>
+            </button>
+
+            <button class="persona-chip" data-persona="product_manager" id="personaPm">
+              <div class="persona-role">
+                <span>Aaliyah Chen</span>
+                <span class="persona-level">Lead PM • 82%</span>
+              </div>
+              <span class="persona-sub">Enterprise GenAI, SaaS, A/B Test</span>
+            </button>
+
+            <button class="persona-chip" data-persona="junior_grad" id="personaJunior">
+              <div class="persona-role">
+                <span>Devin Patel</span>
+                <span class="persona-level">New Grad • 54%</span>
+              </div>
+              <span class="persona-sub">React, Node, Express, Needs Work</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Ingestion & Dropzone Area -->
+        <div class="ingestion-panel" id="ingestionPanel">
+          <div class="dropzone-card" id="resumeDropzone">
+            <!-- Animated Scanning Laser Beam -->
+            <div class="scan-beam" id="scanBeam"></div>
+
+            <div class="dropzone-icon-wrap">
+              <svg width="34" height="34" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+              </svg>
+            </div>
+
+            <h2 class="dropzone-heading">Drop your resume PDF or DOCX here</h2>
+            <p class="dropzone-meta">Our two-tower engine will parse text, audit ATS compliance, and score job fit</p>
+
+            <input type="file" id="resumeFileInput" accept=".pdf,.docx,.txt,.md" style="display: none;">
+
+            <div class="dropzone-actions">
+              <button class="browse-btn" id="browseFileBtn">Browse Files</button>
+              <button class="text-paste-toggle-btn" id="togglePasteDrawerBtn">Paste Raw Text</button>
+            </div>
+
+            <!-- Active Uploaded File Pill -->
+            <div class="active-file-indicator" id="activeFileIndicator">
+              <div class="file-info">
+                <svg width="20" height="20" fill="none" stroke="var(--accent-emerald-bright)" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <div>
+                  <div class="file-name" id="activeFileName">resume.pdf</div>
+                  <div class="file-size" id="activeFileSize">128 KB</div>
+                </div>
+              </div>
+              <button class="remove-file-btn" id="removeFileBtn" title="Remove custom file and revert">
+                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Raw Text Paste Drawer -->
+            <div class="paste-drawer" id="pasteDrawer">
+              <textarea class="raw-textarea" id="rawResumeText" placeholder="Paste full resume text here (Experience, Skills, Education)..."></textarea>
+              <button class="paste-analyze-btn" id="analyzePastedTextBtn">Run Intelligence Extraction →</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Navigation Tabs -->
+      <section aria-label="Dashboard Navigation Tabs">
+        <div class="dashboard-nav-tabs" role="tablist">
+          <button class="tab-btn active" data-tab="tab-scorecard" id="tabScorecardBtn" role="tab">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+            <span>ATS Diagnostic Audit</span>
+            <span class="tab-badge" id="atsScoreTabBadge">Scorecard</span>
+          </button>
+
+          <button class="tab-btn" data-tab="tab-radar" id="tabRadarBtn" role="tab">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/>
+            </svg>
+            <span>Skill Radar & Matrix</span>
+            <span class="tab-badge">Taxonomy</span>
+          </button>
+
+          <button class="tab-btn" data-tab="tab-jobs" id="tabJobsBtn" role="tab">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <span>Two-Tower Matches</span>
+            <span class="tab-badge">Live Jobs</span>
+          </button>
+
+          <button class="tab-btn" data-tab="tab-optimizer" id="tabOptimizerBtn" role="tab">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
+            </svg>
+            <span>Google XYZ Rewriter</span>
+            <span class="tab-badge">GenAI</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           TAB 1: ATS SCORECARD & DIAGNOSTIC AUDIT
+           ==================================================================== -->
+      <section class="tab-content active" id="tab-scorecard" role="tabpanel">
+        <div class="executive-score-grid">
+          <!-- Circular Score Gauge Card -->
+          <article class="score-gauge-card">
+            <div class="gauge-svg-wrap">
+              <svg class="gauge-svg" viewBox="0 0 210 210">
+                <defs>
+                  <linearGradient id="gaugeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#10b981" />
+                    <stop offset="100%" stop-color="#06b6d4" />
+                  </linearGradient>
+                </defs>
+                <circle class="gauge-bg-circle" cx="105" cy="105" r="90"></circle>
+                <circle class="gauge-progress-circle" id="gaugeProgressCircle" cx="105" cy="105" r="90"></circle>
+              </svg>
+              <div class="gauge-inner-content">
+                <span class="gauge-score-number" id="atsScoreValue">94</span>
+                <span class="gauge-total-label">/ 100 ATS</span>
+              </div>
+            </div>
+
+            <div class="gauge-tier-badge" id="atsGradeBadge">Grade A+</div>
+            <p class="gauge-verdict-text" id="atsVerdictText">Elite candidate profile aligned with Tier-1 engineering benchmarks.</p>
+          </article>
+
+          <!-- 4 Core Pillars Breakdown -->
+          <div class="pillars-container">
+            <article class="pillar-card">
+              <div class="pillar-header">
+                <div class="pillar-title-group">
+                  <div class="pillar-icon-box">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"/></svg>
+                  </div>
+                  <h3 class="pillar-name">ATS Machine Parseability & Layout</h3>
+                </div>
+                <span class="pillar-score-tag" id="parseabilityVal">95/100</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" id="parseabilityFill" style="width: 95%;"></div>
+              </div>
+              <div class="pillar-desc">
+                <span>Greenhouse & Workday table/column compatibility</span>
+                <span style="color: var(--accent-emerald-bright); font-family: var(--font-mono);">PASSED</span>
+              </div>
+            </article>
+
+            <article class="pillar-card">
+              <div class="pillar-header">
+                <div class="pillar-title-group">
+                  <div class="pillar-icon-box">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                  </div>
+                  <h3 class="pillar-name">Quantified Impact (Google XYZ Formula)</h3>
+                </div>
+                <span class="pillar-score-tag" id="impactVal">96/100</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" id="impactFill" style="width: 96%;"></div>
+              </div>
+              <div class="pillar-desc">
+                <span>Percentage of experience bullets containing measurable scale metrics</span>
+                <span style="color: var(--accent-emerald-bright); font-family: var(--font-mono);">EXCELLENT</span>
+              </div>
+            </article>
+
+            <article class="pillar-card">
+              <div class="pillar-header">
+                <div class="pillar-title-group">
+                  <div class="pillar-icon-box">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                  </div>
+                  <h3 class="pillar-name">Power Verb Index & Leadership Phrasing</h3>
+                </div>
+                <span class="pillar-score-tag" id="verbVal">98/100</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" id="verbFill" style="width: 98%;"></div>
+              </div>
+              <div class="pillar-desc">
+                <span>Absence of passive fillers ("helped with", "responsible for")</span>
+                <span style="color: var(--accent-emerald-bright); font-family: var(--font-mono);">ELITE</span>
+              </div>
+            </article>
+
+            <article class="pillar-card">
+              <div class="pillar-header">
+                <div class="pillar-title-group">
+                  <div class="pillar-icon-box">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                  </div>
+                  <h3 class="pillar-name">Section Standardization & Skill Density</h3>
+                </div>
+                <span class="pillar-score-tag" id="completenessVal">92/100</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" id="completenessFill" style="width: 92%;"></div>
+              </div>
+              <div class="pillar-desc">
+                <span>Standardized headings and optimal technical keyword saturation</span>
+                <span style="color: var(--accent-emerald-bright); font-family: var(--font-mono);">OPTIMAL</span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Deterministic ATS Diagnostic Checklist -->
+        <article class="audit-checks-section">
+          <div class="section-head">
+            <h3 class="section-title">
+              <svg width="20" height="20" fill="none" stroke="var(--accent-emerald-bright)" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+              </svg>
+              Deterministic ATS Heuristics & Audit Log
+            </h3>
+            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">Taleo • Workday • Greenhouse Standard</span>
+          </div>
+
+          <div class="audit-grid" id="auditChecksGrid">
+            <!-- Dynamic audit checks rendered via JS -->
+          </div>
+        </article>
+      </section>
+
+      <!-- ====================================================================
+           TAB 2: SEMANTIC RADAR & SKILL GAP MATRIX
+           ==================================================================== -->
+      <section class="tab-content" id="tab-radar" role="tabpanel">
+        <div class="radar-matrix-grid">
+          <!-- Interactive Radar Canvas -->
+          <article class="radar-canvas-card">
+            <div class="section-head" style="width: 100%; margin-bottom: 12px;">
+              <h3 class="section-title">Capability Vector Radar</h3>
+              <span class="brand-badge">Multi-Axis</span>
+            </div>
+
+            <div class="radar-container">
+              <canvas id="skillsRadarCanvas"></canvas>
+            </div>
+
+            <div class="radar-legend">
+              <div class="legend-item">
+                <div class="legend-color legend-candidate"></div>
+                <span>Candidate Profile</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-color legend-benchmark"></div>
+                <span>Market Benchmark (Tier 1)</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Categorized Taxonomy Matrix -->
+          <article class="taxonomy-matrix-card">
+            <div class="section-head">
+              <h3 class="section-title">
+                <svg width="20" height="20" fill="none" stroke="var(--accent-cyan-bright)" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                </svg>
+                Skills Taxonomy Alignment
+              </h3>
+              <span style="font-size: 0.8rem; color: var(--text-secondary); font-family: var(--font-mono);">
+                <span style="color: var(--accent-emerald-bright);">✓ Matched</span> • <span style="color: #fda4af;">+ Unclaimed</span>
+              </span>
+            </div>
+
+            <div id="taxonomyMatrixContainer">
+              <!-- Dynamically populated taxonomy pills -->
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           TAB 3: TWO-TOWER JOB RECOMMENDATIONS
+           ==================================================================== -->
+      <section class="tab-content" id="tab-jobs" role="tabpanel">
+        <div class="jobs-layout-header">
+          <div>
+            <h2 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700;">Live Role Match Ranking</h2>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">Two-tower neural vector projection evaluated against premier frontier listings.</p>
+          </div>
+          <div class="jobs-search-filter">
+            <span class="brand-badge">2-Stage Retrieval & Ranking</span>
+          </div>
+        </div>
+
+        <div class="jobs-grid" id="jobsGridContainer">
+          <!-- Dynamic Job Cards injected via app.js -->
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           TAB 4: GOOGLE XYZ BULLET REWRITER
+           ==================================================================== -->
+      <section class="tab-content" id="tab-optimizer" role="tabpanel">
+        <article class="optimizer-card">
+          <div class="optimizer-formula-banner">
+            <div class="formula-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <div class="formula-text">
+              <h4>The Google XYZ Impact Equation</h4>
+              <p>Accomplished [X], as measured by [Y], by doing [Z]. Transforms passive task statements into executive-level impact.</p>
+            </div>
+          </div>
+
+          <div class="optimizer-input-group">
+            <label class="optimizer-input-label" for="bulletInput">Select or paste a resume bullet point to rewrite:</label>
+            <textarea class="optimizer-textarea" id="bulletInput" placeholder="e.g., Helped with backend services and fixed bugs in our API..."></textarea>
+            
+            <div class="bullet-sample-chips">
+              <span style="font-size: 0.76rem; color: var(--text-muted); align-self: center;">Try sample:</span>
+              <button class="sample-bullet-chip" data-bullet="Helped team build backend APIs and fix performance bottlenecks in the database.">Backend & APIs</button>
+              <button class="sample-bullet-chip" data-bullet="Worked on cloud migration using terraform and deployed docker containers on kubernetes.">DevOps & Cloud</button>
+              <button class="sample-bullet-chip" data-bullet="Trained deep learning machine learning models and ran inference experiments.">AI & ML Inference</button>
+              <button class="sample-bullet-chip" data-bullet="Responsible for creating UI components in react and attending daily agile standups.">Frontend & React</button>
+            </div>
+          </div>
+
+          <div class="optimize-action-row">
+            <button class="optimize-btn" id="runOptimizerBtn">
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+              </svg>
+              Apply Google XYZ Formula
+            </button>
+          </div>
+
+          <!-- Side-by-Side Comparison -->
+          <div class="comparison-container">
+            <div class="compare-card before">
+              <div class="compare-head">
+                <span class="compare-title">❌ Passive Task (Low ATS Weight)</span>
+                <span style="font-family: var(--font-mono); font-size: 0.74rem; color: var(--accent-rose);">Impact: 28%</span>
+              </div>
+              <div class="compare-body" id="beforeBulletText">
+                "Helped team build backend APIs and fix performance bottlenecks."
+              </div>
+              <span style="font-size: 0.74rem; color: var(--text-muted);">Lacks quantified scale, specific metrics, and power verbs.</span>
+            </div>
+
+            <div class="compare-card after">
+              <div class="compare-head">
+                <span class="compare-title">✅ Google XYZ Optimized (High ATS Weight)</span>
+                <span style="font-family: var(--font-mono); font-size: 0.74rem; color: var(--accent-emerald-bright);">Impact: 98%</span>
+              </div>
+              <div class="compare-body" id="optimizedBulletResult">
+                Architected high-throughput distributed REST microservices handling 4.2M daily transactions, reducing P99 latency by 54% from 380ms to 45ms while saving $140k in cloud overhead.
+              </div>
+              <button class="copy-optimized-btn" id="copyOptimizedBtn">
+                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                </svg>
+                Copy to Resume
+              </button>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 0.82rem; color: var(--text-muted);">
+      <div>
+        <span>NEXUS AI Talent Intelligence Engine • Two-Tower Latent Vector Matcher</span>
+      </div>
+      <div style="font-family: var(--font-mono);">
+        <span>Built for Google XYZ & Deterministic ATS Workday / Greenhouse</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Deep Match Breakdown Modal -->
+  <div class="modal-backdrop" id="jobDetailModal" role="dialog" aria-modal="true" aria-label="Deep Match Breakdown Modal">
+    <div class="modal-box">
+      <button class="modal-close-btn" id="closeModalBtn" aria-label="Close Modal">
+        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      <div id="modalJobContent">
+        <!-- Injected via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- JavaScript ES Modules -->
+  <script type="module" src="scripts/app.js"></script>
+</body>
+</html>
