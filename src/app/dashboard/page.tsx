@@ -104,11 +104,11 @@ export default function CareerDashboardPage() {
           </p>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex flex-wrap items-center gap-3">
           {profile && (
             <button
               onClick={handleClearProfile}
-              className="inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-800 text-xs font-semibold hover:bg-rose-100 transition-colors shadow-subtle"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-800 text-xs font-semibold hover:bg-rose-100 transition-colors shadow-subtle active:scale-[0.98]"
               title="Remove stored resume from browser memory"
             >
               <Trash2 className="w-3.5 h-3.5 text-rose-600" />

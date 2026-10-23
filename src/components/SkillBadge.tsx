@@ -36,7 +36,7 @@ export default function SkillBadge({ skill, status, quote, category }: SkillBadg
         </button>
 
         {showQuote && evidenceQuote && (
-          <div className="absolute left-0 bottom-full mb-2 z-30 w-72 p-3 bg-forest-950 text-white text-xs rounded-xl shadow-elevated border border-forest-800 animate-in fade-in zoom-in-95 duration-150">
+          <div className="absolute left-0 bottom-full mb-2 z-30 max-w-[min(18rem,85vw)] p-3 bg-forest-950 text-white text-xs rounded-xl shadow-elevated border border-forest-800 animate-in fade-in zoom-in-95 duration-150">
             <div className="flex items-center justify-between text-[10px] uppercase font-mono text-limeAccent-300 mb-1.5 font-bold">
               <span>Verified Resume Evidence</span>
               <span>{skillCategory || 'Skill'}</span>
@@ -65,7 +65,7 @@ export default function SkillBadge({ skill, status, quote, category }: SkillBadg
         </button>
 
         {showQuote && (
-          <div className="absolute left-0 bottom-full mb-2 z-30 w-64 p-3 bg-white text-forest-950 text-xs rounded-xl shadow-card border border-amber-200">
+          <div className="absolute left-0 bottom-full mb-2 z-30 max-w-[min(16rem,85vw)] p-3 bg-white text-forest-950 text-xs rounded-xl shadow-card border border-amber-200">
             <span className="font-bold text-amber-900 block mb-1">Context Gap</span>
             <p className="text-[11px] text-muted-foreground leading-snug">
               This skill was identified in your skills list or brief summary, but lacks concrete project accomplishment bullets measuring its usage.

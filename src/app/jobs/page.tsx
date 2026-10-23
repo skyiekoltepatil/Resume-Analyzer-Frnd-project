@@ -275,7 +275,7 @@ export default function JobRecommendationsPage() {
                 setRoleFilter(e.target.value);
                 fetchJobListings(searchQuery, e.target.value, companyFilter);
               }}
-              className="px-3.5 py-2.5 rounded-lg border border-[#D6D6C4] bg-white text-xs font-semibold text-forest-900 focus:outline-none"
+              className="px-3.5 py-2.5 rounded-lg border border-[#D6D6C4] bg-white text-xs font-semibold text-forest-900 focus:outline-none w-full sm:w-auto truncate"
             >
               <option value="All Roles">All Specializations</option>
               <option value="Software Engineer">Software & Full Stack Engineering</option>
@@ -292,7 +292,7 @@ export default function JobRecommendationsPage() {
                 setCompanyFilter(e.target.value);
                 fetchJobListings(searchQuery, roleFilter, e.target.value);
               }}
-              className="px-3.5 py-2.5 rounded-lg border border-[#D6D6C4] bg-white text-xs font-semibold text-forest-900 focus:outline-none"
+              className="px-3.5 py-2.5 rounded-lg border border-[#D6D6C4] bg-white text-xs font-semibold text-forest-900 focus:outline-none w-full sm:w-auto truncate"
             >
               <option value="All Companies">All Employers</option>
               <option value="Google">Google & DeepMind</option>
@@ -306,7 +306,7 @@ export default function JobRecommendationsPage() {
 
             <button
               type="submit"
-              className="px-5 py-2.5 rounded-lg bg-forest-900 text-white font-semibold text-xs hover:bg-forest-800 transition-colors shadow-subtle"
+              className="px-5 py-2.5 rounded-lg bg-forest-900 text-white font-semibold text-xs hover:bg-forest-800 transition-colors shadow-subtle w-full sm:w-auto"
             >
               Search
             </button>
@@ -320,7 +320,7 @@ export default function JobRecommendationsPage() {
             Top Demanded:
           </span>
           {[
-            { label: 'All Employers', value: 'All Companies' },
+            { label: 'All', value: 'All Companies' },
             { label: 'Google', value: 'Google' },
             { label: 'Deloitte', value: 'Deloitte' },
             { label: 'Microsoft', value: 'Microsoft' },

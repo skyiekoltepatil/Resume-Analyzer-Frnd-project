@@ -25,7 +25,7 @@ export default function LandingPage() {
   const [activeWorkflowTab, setActiveWorkflowTab] = useState<'extraction' | 'grounding' | 'matching' | 'xyz'>('grounding');
 
   return (
-    <div className="space-y-24 py-8 sm:py-16">
+    <div className="space-y-16 sm:space-y-24 py-8 sm:py-16">
       
       {/* =====================================================================
           HERO SECTION
@@ -89,17 +89,17 @@ export default function LandingPage() {
 
         {/* Hero Interactive UI Preview Card */}
         <div className="mt-12 sm:mt-16 max-w-5xl mx-auto rounded-2xl bg-white border border-[#E3E3D8] shadow-elevated p-4 sm:p-8">
-          <div className="flex items-center justify-between pb-6 border-b border-[#E3E3D8]">
-            <div className="flex items-center gap-3">
-              <div className="w-3 h-3 rounded-full bg-rose-400" />
-              <div className="w-3 h-3 rounded-full bg-amber-400" />
-              <div className="w-3 h-3 rounded-full bg-emerald-400" />
-              <span className="text-xs font-mono text-muted-foreground ml-2">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-4 pb-6 border-b border-[#E3E3D8]">
+            <div className="flex items-center gap-3 min-w-0">
+              <div className="w-3 h-3 rounded-full bg-rose-400 shrink-0" />
+              <div className="w-3 h-3 rounded-full bg-amber-400 shrink-0" />
+              <div className="w-3 h-3 rounded-full bg-emerald-400 shrink-0" />
+              <span className="text-xs font-mono text-muted-foreground ml-2 truncate">
                 Pathwise Diagnostic Engine — Live Candidate Profile
               </span>
             </div>
-            <span className="inline-flex items-center gap-1.5 text-xs font-mono px-2.5 py-0.5 rounded-full bg-forest-50 text-forest-800 border border-forest-200">
-              <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" /> Factual Grounding Verified
+            <span className="inline-flex items-center gap-1.5 self-start text-xs font-mono px-2.5 py-0.5 rounded-full bg-forest-50 text-forest-800 border border-forest-200 shrink-0">
+              <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0" /> Factual Grounding Verified
             </span>
           </div>
 
@@ -294,7 +294,7 @@ export default function LandingPage() {
           </div>
 
           {/* Tab Selection */}
-          <div className="flex flex-wrap gap-2 pb-6 border-b border-forest-800">
+          <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-2 pb-6 border-b border-forest-800">
             <button
               onClick={() => setActiveWorkflowTab('extraction')}
               className={`px-4 py-2 rounded-lg text-xs font-semibold font-mono transition-all ${
@@ -491,14 +491,14 @@ export default function LandingPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
             <Link
               href="/analyzer"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-forest-900 text-white hover:bg-forest-800 text-base font-semibold shadow-elevated transition-all active:scale-[0.98]"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-forest-900 text-white hover:bg-forest-800 text-base font-semibold shadow-elevated transition-all active:scale-[0.98]"
             >
               <Sparkles className="w-4 h-4 text-limeAccent-400" />
               Upload Resume & Audit Now
             </Link>
             <Link
               href="/dashboard"
-              className="inline-flex items-center gap-2 px-6 py-4 rounded-xl bg-ivory-100 text-forest-900 hover:bg-ivory-200 border border-[#E3E3D8] text-base font-semibold transition-all"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-ivory-100 text-forest-900 hover:bg-ivory-200 border border-[#E3E3D8] text-base font-semibold transition-all active:scale-[0.98]"
             >
               Open Career Dashboard
             </Link>

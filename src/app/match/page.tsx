@@ -210,7 +210,7 @@ function MatchAnalysisContent() {
               </span>
             </div>
 
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
                 <label className="text-[11px] font-mono font-bold text-forest-800 block mb-1">
                   Job Title
@@ -353,7 +353,7 @@ function MatchAnalysisContent() {
                           : 'bg-rose-50/50 border-rose-200 text-forest-950'
                       }`}
                     >
-                      <div className="flex items-center justify-between">
+                      <div className="flex flex-wrap items-center justify-between gap-2">
                         <span className="font-bold text-sm flex items-center gap-2">
                           {isFull && <CheckCircle2 className="w-4 h-4 text-emerald-600" />}
                           {isPartial && <AlertCircle className="w-4 h-4 text-amber-600" />}
@@ -398,7 +398,7 @@ function MatchAnalysisContent() {
             {/* Tailored Elevator Pitch */}
             <div className="editorial-card p-6 sm:p-8 flex flex-col justify-between space-y-4">
               <div className="space-y-3">
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between gap-2 flex-wrap">
                   <span className="text-xs font-mono font-bold uppercase tracking-wider text-forest-800">
                     Tailored Professional Summary Pitch
                   </span>
