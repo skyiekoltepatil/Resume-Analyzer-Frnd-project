@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #F9F9F6;
+  --bg-secondary: #F3F3EC;
+  --bg-surface: #FFFFFF;
+  --forest-dark: #0C2016;
+  --forest-deep: #143527;
+  --forest-mid: #245741;
+  --forest-soft: #367257;
+  --lime-accent: #84CC16;
+  --lime-bright: #A3E635;
+  --lime-pale: #F7FEE7;
+  --border-fine: #E3E3D8;
+  --border-subtle: #EBEBE3;
+  --text-muted: #53645A;
+  --text-dim: #798C82;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--forest-dark);
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  letter-spacing: -0.011em;
+}
+
+/* Fine border utilities */
+.border-fine {
+  border: 1px solid var(--border-fine);
+}
+
+.border-subtle {
+  border: 1px solid var(--border-subtle);
+}
+
+/* Restrained Editorial Card */
+.editorial-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-fine);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px 0 rgba(12, 32, 22, 0.04), 0 1px 2px 0 rgba(12, 32, 22, 0.02);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-card:hover {
+  border-color: #D6D6C4;
+  box-shadow: 0 4px 16px -2px rgba(12, 32, 22, 0.06);
+}
+
+/* Custom crisp scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D1D1C2;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B3B39E;
+}
+
+/* High contrast focus ring */
+:focus-visible {
+  outline: 2px solid var(--forest-mid);
+  outline-offset: 2px;
+}
+
+/* Print styles for resume report export */
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .editorial-card {
+    border: 1px solid #CCCCCC !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+}
